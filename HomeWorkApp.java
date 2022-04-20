@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class HomeWorkApp {
 
     public static void main(String[] args) {
@@ -17,9 +18,11 @@ public class HomeWorkApp {
     }
 
     public static void checkSumSign() {
-
-        int a = -7;
-        int b = 3;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число переменной а");
+        int a = scanner.nextInt();
+        System.out.println("Введите число переменной а");
+        int b = scanner.nextInt();
 
         int result = a + b;
 
