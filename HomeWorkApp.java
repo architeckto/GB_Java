@@ -2,7 +2,6 @@ public class HomeWorkApp {
 
     public static void main(String[] args) {
 
-
         printThreeWords(); //Три слова в столбик
         checkSumSign();
         printColor();
