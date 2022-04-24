@@ -70,7 +70,7 @@ public class HomeWorkApp {
 
     public static boolean leapYearOrNo(int y) {
 
-        if (y % 4 == 0) {
+        if (y % 4 == 0 && y%100 !=0 || y%400==0) {
             System.out.println(y + " является високосным годом");
             return true;
         }
