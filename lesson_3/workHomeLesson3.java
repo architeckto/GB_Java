@@ -10,6 +10,7 @@ public class workHomeLesson3 {
 
         invertArray();
         fillArray();
+        changeArray();
 
     }
 
@@ -47,12 +48,23 @@ public class workHomeLesson3 {
             arr2[i] = i + 1;
         }
             System.out.println(Arrays.toString(arr2));
-        }
+ }
 
 
 //Задание 3 ============================================================================================================
-    //System.out.println("Задание 3 ===================\n");
+        public static void changeArray() {
+            System.out.println("\nЗадание 3 ===================\n");
 
+            int[] arr3 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
+            System.out.println("Исходный массив:   " + Arrays.toString(arr3));
+            for (int i = 0; i < arr3.length; i++){
+                if(arr3[i] < 6){
+                    arr3[i] = arr3[i] * 2;
+                }
+            }
+            System.out.println("Измененный массив: " + Arrays.toString(arr3));
+
+        }
 //Задание 4 ============================================================================================================
     //System.out.println("Задание 4 ===================\n");
 
