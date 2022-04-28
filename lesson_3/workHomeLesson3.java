@@ -40,7 +40,13 @@ public class workHomeLesson3 {
 
 //Задание 2 ============================================================================================================
         public static void fillArray() {
-            System.out.println("\nЗадание 2 ===================\n");
+
+        System.out.println("\nЗадание 2 ===================\n");
+        int[] arr2 = new int[100];
+        for (int i = 0; i < arr2.length; i++){
+            arr2[i] = i + 1;
+        }
+            System.out.println(Arrays.toString(arr2));
         }
 
 
