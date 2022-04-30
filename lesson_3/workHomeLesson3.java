@@ -11,6 +11,8 @@ public class workHomeLesson3 {
         invertArray();
         fillArray();
         changeArray();
+        fillDiagonal();
+        arrayInit(5, 10);
 
     }
 
@@ -66,13 +68,41 @@ public class workHomeLesson3 {
 
         }
 //Задание 4 ============================================================================================================
-    //System.out.println("Задание 4 ===================\n");
+        public static void fillDiagonal() {
+            System.out.println("\nЗадание 4 ===================\n");
+            int[][] arr4 = new int[5][5];
+            for (int i = 0; i < arr4.length; i++){
+                for (int j = 0; j < arr4.length; j++){
+                    if (arr4[i] == arr4[j] ||
+                            (arr4[i] == arr4[0] && arr4[j] == arr4[4] ) ||
+                            (arr4[i] == arr4[1] && arr4[j] == arr4[3] ) ||
+                            (arr4[i] == arr4[3] && arr4[j] == arr4[1] ) ||
+                            (arr4[i] == arr4[4] && arr4[j] == arr4[0] )
+                    ){
+                        arr4[i][j] = 1;
+                    }
+                    System.out.print(arr4[i][j] + " ");
+                }
+                System.out.println();
+            }
+        }
 
 //Задание 5 ============================================================================================================
-    //System.out.println("Задание 5 ===================\n");
+        public static void arrayInit(int len, int initialValue) {
+            System.out.println("\nЗадание 5 ===================\n");
+            int [] arr5 = new int[len];
+            Arrays.fill(arr5, initialValue);
+            System.out.println(Arrays.toString(arr5));
+        }
 
 //Задание 6 ============================================================================================================
-    //System.out.println("Задание 5 ===================\n");
+
+        public static void checkLeftMinRightMin(){
+            System.out.println("\nЗадание 5 ===================\n");
+
+
+        }
+
 
 
 }
