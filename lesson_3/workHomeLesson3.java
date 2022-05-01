@@ -93,6 +93,7 @@ public class workHomeLesson3 {
 //Задание 5 ============================================================================================================
         public static void arrayInit(int len, int initialValue) {
             System.out.println("\nЗадание 5 =================== arrayInit\n");
+            System.out.println("Создаем и заполняем массив длиной " + len + " и заполняем значением " + initialValue);
             int [] arr5 = new int[len];
             Arrays.fill(arr5, initialValue);
             System.out.println(Arrays.toString(arr5));
@@ -104,9 +105,9 @@ public class workHomeLesson3 {
             System.out.println("\nЗадание 6 =================== checkMinMax\n");
             int[] arr6 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
             int Min = Arrays.stream(arr6).min().getAsInt();
-            System.out.println(Min);
+            System.out.println("Минимальное значение массива: " + Min);
             int Max = Arrays.stream(arr6).max().getAsInt();
-            System.out.println(Max);
+            System.out.println("Максимальное значение массива " + Max);
         }
 
 //Задание 7 ============================================================================================================
