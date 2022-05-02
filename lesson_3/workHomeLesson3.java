@@ -125,7 +125,7 @@ public class workHomeLesson3 {
             System.out.println("Размер массива: " + arr.length);
 
             for (int i = 0; i < arr.length; i++) {
-                rightSum = rightSum + arr[i];
+                rightSum += arr[i];
                 if (rightSum == arrSum - rightSum) {
                     balanceLeftRight = true;
                     System.out.println("Проход " + (i + 1) + ": Баланс найден: ");
