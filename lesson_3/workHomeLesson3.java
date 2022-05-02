@@ -1,8 +1,6 @@
 package lesson_3;
 
-//import java.lang.reflect.Array;
 import java.util.Arrays;
-
 
 public class workHomeLesson3 {
 
@@ -16,6 +14,7 @@ public class workHomeLesson3 {
         checkMinMax();
             int[] arr7 = {2, 2, 2, 1, 2, 2, 10, 1};
         System.out.println(checkSumLeftAndSumRight(arr7));
+        rotateMassive(arr7, 1);
 
     }
 
@@ -141,11 +140,17 @@ public class workHomeLesson3 {
 
 //Задание 8 ============================================================================================================
 
-       // public static void check;(){
-       //     System.out.println("\nЗадание 8 ===================\n");
+       public static void rotateMassive(int[] arr, int n){
+            System.out.println("\nЗадание 8 ===================\n");
 
+            System.out.println("Исходный массив:    " + Arrays.toString(arr));
 
-   // }
+            int[] copy = Arrays.copyOf(arr, n);
+            System.arraycopy(arr, n, arr, 0, arr.length - n);
+            System.arraycopy(copy, 0, arr, arr.length - n, n);
+
+            System.out.println("Массив смещен на " + n + ": " + Arrays.toString(arr));
+    }
 
 
 }
