@@ -14,8 +14,8 @@ public class workHomeLesson3 {
         fillDiagonal();
         arrayInit(5, 10);
         checkMinMax();
-            //int[] arr7 = {1,4,2,6,2,8,9,4,1,7,3,9,1,3,2,5,1};
-        //checkSumLeftAndSumRight(arr7);
+            int[] arr7 = {2, 2, 2, 1, 2, 2, 10, 1};
+        System.out.println(checkSumLeftAndSumRight(arr7));
 
     }
 
@@ -111,31 +111,34 @@ public class workHomeLesson3 {
         }
 
 //Задание 7 ============================================================================================================
-/*
+
         public static boolean checkSumLeftAndSumRight(int[] arr){
             System.out.println("\nЗадание 7 =================== checkSumLeftAndSumRight\n");
             boolean balanceLeftRight = false;
             int arrSum = 0;
-            int leftSum = 0;
+            int leftSum;
             int rightSum = 0;
-                for (int i = 0; i < arr.length; i++){
-                    arrSum = arrSum + arr[i];
-                }
+            for (int j : arr) { //Данную конструкция предложила Идея...
+                arrSum = arrSum + j;
+            }
             System.out.println("Сумма всех значений массива: " + arrSum);
-                while (true){
-                for(int i = 0; i < arr.length; i++){
-                    rightSum = rightSum + arr[i];
-                    System.out.println(rightSum);
-                    if(rightSum == (arrSum / 2) - i) {
-                        System.out.println(rightSum);
-                        balanceLeftRight = true;
-                        break;
-                    }
-                    }
+            System.out.println("Размер массива: " + arr.length);
+
+            for (int i = 0; i < arr.length; i++) {
+                rightSum = rightSum + arr[i];
+                if (rightSum == arrSum - rightSum) {
+                    balanceLeftRight = true;
+                    System.out.println("Проход " + (i + 1) + ": Баланс найден: ");
+                    System.out.println("Сумма правой части массива: " + rightSum);
+                    leftSum = arrSum - rightSum;
+                    System.out.println("Сумма левой части массива: " + leftSum);
+                    //break;
                 }
-            //return balanceLeftRight;
+                    System.out.println("Проход " + (i + 1) + ": Баланс не найден");
+
+            }return balanceLeftRight;
         }
-*/
+
 //Задание 8 ============================================================================================================
 
        // public static void check;(){
