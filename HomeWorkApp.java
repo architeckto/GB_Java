@@ -2,60 +2,80 @@ public class HomeWorkApp {
 
     public static void main(String[] args) {
 
-        printThreeWords();
-        checkSumSign();
-        printColor();
-        compareNumbers();
+        System.out.println("Lesson 2.1 ");
+        System.out.println("version 1");
+        System.out.println(checkTwoNumbers2(11, 7));
+        System.out.println("version 2");
+        checkTwoNumbers(3, 27);
+        System.out.println("Lesson 2.2 ");
+        isPositiveOrNegative(-1);
+        System.out.println("Lesson 2.3 ");
+        System.out.println(isNegative(5));
+        System.out.println("Lesson 2.4 ");
+        printWordNTimes("I'm a QA engineer at my mom's", 7);
+        System.out.println("Lesson 2.5 ");
+        System.out.println(leapYearOrNo(2019));
+
     }
 
-    public static void printThreeWords() {
+    //Задание 1 ============================================================================================================
+    public static void checkTwoNumbers(int a, int b) {
 
-        System.out.println("Orange");
-        System.out.println("Banana");
-        System.out.println("Apple");
+        int i = a + b;
+        boolean a1 = i >= 10 && i <= 20;
+
+        if (true) {
+            System.out.println("Результат проверки суммы чисел: " + i + " " + a1);
+        }
+    }
+
+    public static boolean checkTwoNumbers2(int a, int b) {
+
+
+        int i = a + b;
+        boolean a1 = i >= 10 && i <= 20;
+        System.out.println("Результат проверки суммы чисел: " + i);
+        return a1;
 
     }
 
-    public static void checkSumSign() {
+//Задание 2 ============================================================================================================
 
-        int a = -7;
-        int b = 3;
+    public static void isPositiveOrNegative(int a) {
 
-        int result = a + b;
-
-        if (result >= 0){
-            System.out.println("Сумма положительная " + result);
-        }else {
-            System.out.println("Сумма отрицательная " + result);
+        if (a < 0) {
+            System.out.println("Отрицательное число " + a);
+        } else {
+            System.out.println("Положительное число " + a);
         }
 
     }
 
-    public static void printColor(){
+//Задание 3 ============================================================================================================
 
-        int value = 101;
-
-        if(value <= 0){
-            System.out.println(value + " Color Red");
-        }if (value > 0 && value <= 100) {
-            System.out.println(value + " Color Yellow");
-        }if (value > 100){
-            System.out.println(value + " Color Green");
-        }
-
+    public static boolean isNegative(int a) {
+        return a < 0;
     }
 
-    public static void compareNumbers(){
+//Задание 4 ============================================================================================================
 
-        int a = 25;
-        int b = 25;
+    public static void printWordNTimes(String word, int times) {
 
-        if(a >= b){
-            System.out.println("a >= b");
-        }else {
-            System.out.println("a < b");
+        for (int i = times; i > 0; i--) {
+            System.out.println(i + " " + word);
         }
-
     }
 
+//Задание 5 ============================================================================================================
+
+    public static boolean leapYearOrNo(int y) {
+
+        if (y % 4 == 0 && y%100 !=0 || y%400==0) {
+            System.out.println(y + " является високосным годом");
+            return true;
+        }
+        System.out.println(y + " не является високосным годом");
+        return false;
+
+    }
 }
