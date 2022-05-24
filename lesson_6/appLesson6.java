@@ -14,7 +14,7 @@ public class appLesson6 {
         System.out.println("=>  Собака " + dog1.getName() + "\n пробежала: \n" + " " + dog1.getRunDog() + " " + "\n и " +
                 "проплыла:" + " \n" + " " + dog1.getSwim());
         System.out.println("=>  Собака " + dog2.getName() + "\n пробежала: \n" + " " + dog2.getRunDog() + " " + "\n и " +
-                "проплыла:" + " \n" + " " + dog1.getSwim());
+                "проплыла:" + " \n" + " " + dog2.getSwim());
 
         System.out.println("======================================");
         System.out.println("Невалидные значения:");
